@@ -1,0 +1,64 @@
+---
+import '../styles/global.css';
+
+const services = [
+  { icon: '/icons/cloud.png', number: '01', title: 'System Integration & Cloud', text: 'Architetture connesse, infrastrutture cloud e integrazioni affidabili per far dialogare sistemi, dati e processi.' },
+  { icon: '/icons/data.png', number: '02', title: 'Digital Transformation & Data', text: 'Percorsi data-driven, automazione e piattaforme digitali che trasformano la complessità operativa in valore misurabile.' },
+  { icon: '/icons/security.png', number: '03', title: 'Cybersecurity & Compliance', text: 'Protezione end-to-end, governance del rischio e presidio normativo: ISO 27001, NIS2, DORA, CRA e PSD2.' },
+  { icon: '/icons/ams.png', number: '04', title: 'Application Management', text: 'Servizi AMS strutturati, continuità operativa e supporto evolutivo per applicazioni mission-critical.' },
+  { icon: '/icons/ecm.png', number: '05', title: 'ECM & Document Intelligence', text: 'Acquisizione, gestione, firma e conservazione dei contenuti con processi documentali intelligenti e conformi.' },
+  { icon: '/icons/bpm.png', number: '06', title: 'BPM & Sviluppo Custom', text: 'Analisi, reingegnerizzazione e sviluppo di workflow, applicazioni moderne e integrazioni avanzate.' },
+];
+
+const technologies = ['java', 'python', 'nodejs', 'spring', 'oracle', 'postgresql', 'mongodb', 'docker', 'kubernetes', 'php'];
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Nexum-ICT è il consorzio italiano di competenze tecnologiche per system integration, digital transformation, cybersecurity, AMS, ECM, BPM e pagamenti." />
+    <meta name="theme-color" content="#061c35" />
+    <link rel="icon" type="image/png" href="/brand/nexum-mark.png" />
+    <title>Nexum-ICT | Più competenze. Un solo partner.</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="Nexum ICT, torna all'inizio"><img src="/brand/nexum-ict.png" alt="Nexum ICT" width="145" height="129" /></a>
+      <nav aria-label="Navigazione principale"><a href="#nexum">Nexum</a><a href="#servizi">Competenze</a><a href="#modello">Modello</a><a href="#ecosistema">Ecosistema</a></nav>
+      <a class="button button-small" href="#contatti">Parliamone <span>↗</span></a>
+      <details class="mobile-menu"><summary aria-label="Apri il menu"><i></i><i></i></summary><nav><a href="#nexum">Nexum</a><a href="#servizi">Competenze</a><a href="#modello">Modello</a><a href="#ecosistema">Ecosistema</a><a href="#contatti">Contatti</a></nav></details>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <img class="hero-image" src="/images/hero.webp" alt="Ecosistema tecnologico e infrastrutture digitali" fetchpriority="high" />
+        <div class="hero-shade"></div><div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content"><p class="eyebrow light"><span></span>Consorzio di eccellenza ICT</p><h1>Più competenze.<br /><em>Un solo partner.</em></h1><p>Uniamo persone, tecnologie e visione per governare la complessità digitale e rendere ogni organizzazione più sicura, efficiente e pronta a crescere.</p><div class="hero-actions"><a class="button" href="#servizi">Esplora le competenze <span>↓</span></a><a class="link-light" href="#nexum">Scopri Nexum ICT <span>↗</span></a></div></div>
+        <div class="hero-proof"><strong>End-to-end</strong><span>Dal disegno strategico alla continuità operativa</span></div>
+      </section>
+
+      <section class="pillars" aria-label="I tre pilastri della proposta di valore"><div><span>01</span><strong>Governance & solidità</strong><p>Un unico interlocutore, una regia chiara.</p></div><div><span>02</span><strong>Continuità & presidio</strong><p>Competenze vicine, servizi sempre presenti.</p></div><div><span>03</span><strong>Scalabilità immediata</strong><p>Un modello hub & spoke che cresce con te.</p></div></section>
+
+      <section class="section intro" id="nexum"><div><p class="eyebrow"><span></span>Il valore del consorzio</p><h2>La complessità digitale diventa una forza condivisa.</h2></div><div class="intro-copy"><p class="lead">Nexum-ICT nasce dall’incontro tra realtà italiane con competenze complementari e una visione comune: creare un polo tecnologico solido, specializzato e vicino al cliente.</p><p>Uniamo l’agilità delle imprese specialistiche alla capacità di governare programmi complessi, offrendo un punto di accesso unico a competenze, piattaforme e professionalità di alto livello.</p><a class="text-link" href="#ecosistema">Conosci il nostro ecosistema <span>↗</span></a></div></section>
+
+      <section class="section services" id="servizi"><div class="section-top"><div><p class="eyebrow"><span></span>Competenze integrate</p><h2>Un ecosistema.<br />Ogni sfida digitale.</h2></div><p>Dalla strategia all’operatività, progettiamo e presidiamo l’intero ciclo di vita IT con team multidisciplinari e responsabilità chiare.</p></div><div class="service-grid">{services.map((service) => <article class="service-card"><div class="service-head"><span>{service.number}</span><img src={service.icon} alt="" width="58" height="58" loading="lazy" /></div><h3>{service.title}</h3><p>{service.text}</p><a href="#contatti" aria-label={`Parla con noi di ${service.title}`}>Approfondisci <span>↗</span></a></article>)}</div></section>
+
+      <section class="operating" id="modello"><div class="operating-copy"><p class="eyebrow light"><span></span>Il nostro modello</p><h2>Un’unica regia.<br />Competenze che si attivano.</h2><p>Il modello Hub & Spoke abilita rapidamente le professionalità necessarie, mantenendo governance, qualità e responsabilità in un solo punto.</p><div class="model-list"><div><span>01</span><p><strong>Ascolto e disegno</strong>Partiamo dagli obiettivi, non dalla tecnologia.</p></div><div><span>02</span><p><strong>Team su misura</strong>Attiviamo gli specialisti giusti, senza rigidità.</p></div><div><span>03</span><p><strong>Presidio continuo</strong>Misuriamo, miglioriamo e proteggiamo nel tempo.</p></div></div></div><div class="orbit" aria-label="Ciclo di vita dei servizi Nexum ICT"><div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div><div class="orbit-core"><img src="/brand/nexum-mark.png" alt="" width="70" height="68" /><strong>Ciclo di vita<br />del dato</strong></div><span class="orbit-label orbit-1">System integration</span><span class="orbit-label orbit-2">Digital transformation</span><span class="orbit-label orbit-3">Application management</span><span class="orbit-label orbit-4">Sicurezza & GRC</span><span class="orbit-label orbit-5">Sistemi di pagamento</span><span class="orbit-label orbit-6">Sviluppo & ecosistema</span></div></section>
+
+      <section class="section verticals"><div class="section-top"><div><p class="eyebrow"><span></span>Esperienza verticale</p><h2>Dove l’affidabilità non è negoziabile.</h2></div><p>Portiamo competenze specifiche nei contesti ad alta complessità, dove sicurezza, continuità e conformità determinano il valore del servizio.</p></div><div class="vertical-grid"><article class="vertical-main"><span>01 / Finance</span><h3>Pagamenti e monetica</h3><p>Sviluppo e gestione di sistemi e-payment, testing funzionale, stress test e consulenza specialistica per transazioni elettroniche mission-critical.</p><div class="pulse" aria-hidden="true">|||||||||||||||||||||||||||||||||||||||||</div></article><article><span>02 / Content</span><h3>ECM e normativa</h3><p>Document intelligence, workflow di firma, conservazione e servizi compliance by design.</p></article><article><span>03 / Process</span><h3>BPM e modernizzazione</h3><p>Process analysis, application modernization, mobile workflow, audit e performance tuning.</p></article></div></section>
+
+      <section class="human"><img src="/images/vision.webp" alt="Persone connesse da una rete digitale" loading="lazy" /><div class="human-shade"></div><div class="human-content"><p class="eyebrow light"><span></span>Capitale umano</p><h2>La tecnologia accelera.<br />Le persone fanno la differenza.</h2><p>Academy, laboratorio di innovazione e ricerca continua alimentano competenze aggiornate e team capaci di trasformare nuove opportunità in risultati concreti.</p><div class="human-points"><span>Academy formativa</span><span>Innovation lab</span><span>Talent network</span></div></div></section>
+
+      <section class="section ecosystem" id="ecosistema"><div class="ecosystem-copy"><p class="eyebrow"><span></span>Il consorzio</p><h2>Specialisti per natura.<br />Uniti per visione.</h2><p>Retesi porta la propria esperienza nella progettazione e gestione di soluzioni ICT; I.CON contribuisce con competenze specialistiche e capacità di risposta nei servizi informatici. Insieme, una struttura coordinata per affrontare iniziative complesse e scalabili.</p><div class="partners"><img src="/partners/retesi.png" alt="Retesi" width="180" height="180" loading="lazy" /><img src="/partners/icon.png" alt="I.CON" width="180" height="180" loading="lazy" /></div></div><div class="ecosystem-image"><img src="/images/ecosystem.webp" alt="Sede tecnologica contemporanea" loading="lazy" /></div></section>
+
+      <section class="technology" aria-label="Tecnologie"><p>Un ecosistema tecnologico aperto</p><div>{technologies.map((tech) => <img src={`/tech/${tech}.png`} alt={tech} width="100" height="64" loading="lazy" />)}</div></section>
+      <section class="contact" id="contatti"><div><p class="eyebrow light"><span></span>Costruiamo il prossimo passo</p><h2>La tua prossima sfida<br />inizia da una connessione.</h2></div><div><p>Raccontaci il contesto. Attiveremo le competenze giuste per trasformarlo in un progetto concreto, solido e scalabile.</p><a class="button button-white" href="mailto:info@nexum-ict.it">Parla con Nexum ICT <span>↗</span></a></div></section>
+    </main>
+
+    <footer><a class="footer-logo" href="#top"><img src="/brand/nexum-ict.png" alt="Nexum ICT" width="130" height="115" /></a><p>Il polo di eccellenza tecnologica<br />per la trasformazione digitale.</p><nav><a href="#nexum">Nexum</a><a href="#servizi">Competenze</a><a href="#modello">Modello</a><a href="#ecosistema">Ecosistema</a><a href="#contatti">Contatti</a></nav><small>© {year} Nexum-ICT. Tutti i diritti riservati.</small></footer>
+  </body>
+</html>
